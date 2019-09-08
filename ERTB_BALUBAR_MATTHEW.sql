@@ -1,24 +1,27 @@
 /* 
-ORACLE DATABASE PROGRAMMING (PROG 3113)
- LABORATORY ACTIVITY #1
+    PROG 3113 - Oracle Database Programming
+    LABORATORY ACTIVITY #1
  
- BALUBAR, MATTHEW JOHANNES C.
- ERT-B
- */
+    OBRA, RHENE RYAN JOHN Q.
+    ERT-B
+*/
+
+    --v2.0.0a1
+    --VERSION CONTROL REPOSITORY at https://github.com/H1NIVyrus/PROJECT-DBM
  
- --TO-DO #1: Analyze the problem & make a Pseudocode
- --TO-DO #2: Coding TIMEEE!
- --TO-DO #3: Run and Test Script
- --TO-DO #4: Debug
- --TO-DO #5: Beta Test
- --TO-DO #6: Refactor and Improve the code
- --TO-DO #7: Pass the project
+ --TODO #1: Analyze the problem & make a Pseudocode
+ --TODO #2: Coding TIMEEE!
+ --TODO #3: Run and Test Script
+ --TODO #4: Debug
+ --TODO #5: Beta Test
+ --TODO #6: Refactor and Improve the code
+ --TODO #7: Pass the Project
  
  /*
  PSEUDOCODE
  
  PROBLEM:
- -Write and Analyze Basic SQL statements based on the given Laboratory Activity Sheet in creating database tables.
+ -Write and Analyze Basic SQL statements based on the instructions given at Laboratory Activity Sheet in creating database tables.
  
  SOLUTIONS:
  #1: Use CREATE TABLE in problem A
@@ -37,78 +40,139 @@ ORACLE DATABASE PROGRAMMING (PROG 3113)
  
  CREATE TABLE ClsRec
  (
-        StudNo number(8) not null,
-        StudName varchar2(15) not null,
-        YoB number(4) not null,
-        WrtnWrk1 number(3) not null,
-        WrtnWrk2 number(3) not null,
-        PerfTask1 number(3) not null,
-        PerfTask2 number(3) not null,
-        MajExam number(3) not null,
-        PRIMARY KEY(StudNo) 
+    "StudNo" NUMBER(8) PRIMARY KEY not null,        
+    
+    "StudName" VARCHAR2(15) not null,
+    
+    "YoB" NUMBER(4) not null,
+    
+    "WrtnWrk1" NUMBER(3) not null,
+    
+    "WrtnWrk2" NUMBER(3) not null,
+    
+    "PerfTask1" NUMBER(3) not null,
+    
+    "PerfTask2" NUMBER(3) not null,
+    
+    "MajExam" NUMBER(3) not null
  );
  
  -- B. Insert the following records
  
  INSERT ALL
  
-    INTO ClsRec (StudNo, StudName, YoB, WrtnWrk1, WrtnWrk2, PerfTask1, PerfTask2, MajExam)
-        VALUES (20165826, 'Aleesha', 2002, 80, 77, 73, 77, 72)
- 
-    INTO ClsRec (StudNo, StudName, YoB, WrtnWrk1, WrtnWrk2, PerfTask1, PerfTask2, MajExam)
-        VALUES (20022735, 'Mateo', 2000, 90, 81, 100, 92, 100)
- 
-    INTO ClsRec(StudNo, StudName, YoB, WrtnWrk1, WrtnWrk2, PerfTask1, PerfTask2, MajExam)
-         VALUES (20148812, 'Sofia', 1998, 92, 95, 93, 82, 95)
- 
-    INTO ClsRec(StudNo, StudName, YoB, WrtnWrk1, WrtnWrk2, PerfTask1, PerfTask2, MajExam)
-        VALUES (20010881, 'Regina', 2002, 91, 96, 82, 90, 86)
- 
-    INTO ClsRec (StudNo, StudName, YoB, WrtnWrk1, WrtnWrk2, PerfTask1, PerfTask2, MajExam)
-        VALUES (20062515, 'Llyod', 2001, 85, 94, 89, 79, 70)
- 
-    INTO ClsRec (StudNo, StudName, YoB, WrtnWrk1, WrtnWrk2, PerfTask1, PerfTask2, MajExam)
-         VALUES (20131203, 'Shayla', 1999, 84, 89, 79, 80, 95)
- 
-    INTO ClsRec (StudNo, StudName, YoB, WrtnWrk1, WrtnWrk2, PerfTask1, PerfTask2, MajExam)
-        VALUES (20103547, 'Ella Marie', 2001, 76, 97, 96, 92, 93)
- 
-    INTO ClsRec (StudNo, StudName, YoB, WrtnWrk1, WrtnWrk2, PerfTask1, PerfTask2, MajExam)
-        VALUES (20133697, 'Benito', 2000, 83, 98, 80, 73, 91)
- 
-    INTO ClsRec (StudNo, StudName, YoB, WrtnWrk1, WrtnWrk2, PerfTask1, PerfTask2, MajExam)
-        VALUES (20046553, 'Rosanna', 2000, 73, 98, 86, 93, 70)
- 
-    INTO ClsRec (StudNo, StudName, YoB, WrtnWrk1, WrtnWrk2, PerfTask1, PerfTask2, MajExam)
-         VALUES (20130901, 'Gizelle', 2001, 80, 100, 70, 86, 98)
- 
- SELECT * FROM dual;
+    INTO ClsRec VALUES(20165826, 'Aleesha', 2002, 80, 77, 73, 77, 72)
+    
+    INTO ClsRec VALUES(20022735, 'Mateo', 2000, 90, 81, 100, 92, 100)
+    
+    INTO ClsRec VALUES(20148812, 'Sophia', 1998, 92, 95, 93, 82, 95)
+    
+    INTO ClsRec VALUES(20010881, 'Regina', 2002, 91, 96, 82, 90, 86)
+    
+    INTO ClsRec VALUES(20062515, 'Lloyd', 2001, 85, 94, 89, 79, 70)
+    
+    INTO ClsRec VALUES(20131203, 'Shayla', 1999, 84, 89, 79, 80, 95)
+    
+    INTO ClsRec VALUES(20103547, 'Ella Marie', 2001, 76, 97 ,96 ,92 ,93)
+    
+    INTO ClsRec VALUES(20133697, 'Benito', 2000, 83, 98, 80, 73, 91)
+    
+    INTO ClsRec VALUES(20046553, 'Rosanna', 2000, 73, 98, 86, 93, 70)
+    
+    INTO ClsRec VALUES(20130901, 'Giselle', 2001, 80, 100, 70, 86, 98)
+    
+ SELECT * FROM DUAL;
  
  -- C. Using the SELECT statement, compute the Total WrtnWork and Total PerfTask
  
  SELECT 
-    StudNo, 
-    StudName, 
-    (WrtnWrk1 + WrtnWrk2) AS TotalWrtnWork, 
-    (PerfTask1 + PerfTask2) AS TotalPerfTask 
-    
+ 
+    "StudNo", 
+ 
+    "StudName", 
+ 
+    ("WrtnWrk1" + "WrtnWrk2") as "Total WrtnWork", 
+ 
+    ("PerfTask1" + "PerfTask2") as "Total PerfTask" 
+ 
  FROM ClsRec;
  
  -- D. Modify the table by adding new columns
  
  ALTER TABLE ClsRec
- 
-    ADD
-        Age number(2) not null,
-        Ave WrtnWrk number(5, 2) not null,
-        Ave PerfTask number(5, 2) not null,
-        ClsStnd number(5, 2) not null,
-        Final Grade number(5, 2) not null;
+    ADD 
+    (
+        "Age" NUMBER(2),
         
--- E. Update the records by computing the age of students
+        "Ave WrtnWrk" NUMBER(5,2),
+        
+        "Ave PerfTask" NUMBER(5,2),
+        
+        "ClsStnd" NUMBER(5,2),
+        
+        "Final Grade" NUMBER(5,2)
+    );
+        
+ -- E. Update records by computing AGE of the students
+ 
+ UPDATE ClsRec 
+ 
+    SET "Age" = (2019 - "YoB");
 
- UPDATE  TABLE ClsRec
-    SET Age  
-        WHERE Age = (2019 - YoB);
+ -- F. Update records by computing the Ave WrtnWrk and Ave PerfTask
+ 
+ UPDATE ClsRec 
+    SET 
+        "Ave WrtnWrk" = ("WrtnWrk1" + "WrtnWrk2")/2, 
+        
+        "Ave PerfTask" = ("PerfTask1" + "PerfTask2")/2;
+
+ -- G. Update records by computing the ClsStnd
+ 
+ UPDATE ClsRec 
+ 
+    SET "ClsStnd" = ("Ave WrtnWrk" + "Ave PerfTask")/2;
+
+ -- H. Update the records by computing the Final Grade
+
+ UPDATE ClsRec 
+ 
+    SET "Final Grade" = ("MajExam" + "ClsStnd")/2;
+
+ -- I. Show the records of the students who are adults
+
+ SELECT * FROM ClsRec 
+    
+    WHERE "Age" >= 18;
+
+ -- J. Show the records of the students who are teenagers
+ 
+ SELECT *  FROM ClsRec 
+    
+    WHERE "Age" < 18;
+
+ -- K. Show the records of the students who have a passing grade for Ave WrtnWrk
+ 
+ SELECT *  FROM ClsRec 
+    
+    WHERE "Ave WrtnWrk" >= 75;
+
+-- L. Show the records of the students who have a failing grade for Ave PerfTask
+ 
+ SELECT *  FROM ClsRec 
+ 
+    WHERE "Ave PerfTask" < 75;
+
+-- M. Show the records of the students who have passed on their Final Grade
+ 
+ SELECT *  FROM ClsRec 
+ 
+    WHERE "Final Grade" >= 75;
+
+-- N. Show the records of the students who have failed on their Final Grade
+ 
+ SELECT *  FROM ClsRec 
+ 
+    WHERE "Final Grade" < 75;
         
 
